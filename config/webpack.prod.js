@@ -11,7 +11,7 @@ const glob = require("glob");
 
 module.exports = {
   entry: {
-    main: "./src/index.js"
+    main: "./src/js/app.js"
   },
   output: {
     path: path.join(__dirname, "../build"),

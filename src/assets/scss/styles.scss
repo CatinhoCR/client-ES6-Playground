@@ -1,0 +1,8 @@
+// Abstracts (NO CSS output when compiled on it's own rule of thumb)
+@import './abstracts/variables';
+@import './abstracts/functions';
+@import './abstracts/mixins';
+
+// Base (Global styling)
+@import './base/normalize';
+@import './base/globals';
