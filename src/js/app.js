@@ -8,7 +8,7 @@ const router = new Router({
   mode: 'hash',
   root: '/',
 })
-
+// TODO: Login, Session Cookies, Auth Guards, Set Dynamic Token session
 router
 .add('artists', () => {
   Artists.init()
@@ -19,7 +19,9 @@ router
 
 class App {
   constructor () {
+    // TODO: Separate shit in components... Functional - Proof of concept for now
     this.header = Header.init()
+    // TODO: Populate dynamically: url -> fetch -> data -> populates
     this.content = document.getElementById('page-container')
   }
 }
