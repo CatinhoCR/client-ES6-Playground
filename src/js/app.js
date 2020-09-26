@@ -1,29 +1,35 @@
-// import 'babel-polyfill'
-import { hello, tes } from './globals/import-example'
+import Router from './config/routing'
+import Header from './components/header'
+import Dashboard from './modules/dashboard'
+import Artists from './modules/artists'
+import '../assets/scss/styles.scss'
 
-import '../scss/styles.scss'
+const router = new Router({
+  mode: 'hash',
+  root: '/',
+})
 
-// Include css for webpack (for development only)
-// const css = require('../css/main.scss') // eslint-disable-line no-unused-vars
+router
+.add('artists', () => {
+  Artists.init()
+})
+.add('', () => {
+  Dashboard.init()
+})
 
-// Hot reloading (for development only)
-// if (module.hot) {
-//   module.hot.accept()
-// }
-
-hello()
-
-async function run() {
-  const value = await tes()
-  console.log(value)
+class App {
+  constructor () {
+    this.header = Header.init()
+    this.content = document.getElementById('page-container')
+  }
 }
 
-run();
+const app = new App()
 
-async function lazyLoadExample() {
-  const { lazyLoad } = await import('./globals/lazyload')
-  lazyLoad().then(res => console.log(res))
-};
-
-const lazyload = document.querySelector("#lazy-load")
-if (lazyload) lazyload.addEventListener('click', lazyLoadExample)
+/*
+// TODO:
+router
+  // .add(/products\/(.*)\/specification\/(.*)/, (id, specification) => {
+  //   alert(`products: ${id} specification: ${specification}`)
+  // })
+*/
