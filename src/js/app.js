@@ -1,5 +1,6 @@
 import Router from './config/routing'
 import Header from './components/header'
+import Login from './auth/login'
 import Dashboard from './modules/dashboard'
 import Artists from './modules/artists'
 import '../assets/scss/styles.scss'
@@ -12,6 +13,9 @@ const router = new Router({
 router
 .add('artists', () => {
   Artists.init()
+})
+.add('login', () => {
+  Login.init()
 })
 .add('', () => {
   Dashboard.init()

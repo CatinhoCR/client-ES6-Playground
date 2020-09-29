@@ -1,0 +1,14 @@
+body {
+	background-color: #f7f7f7;
+
+	.content-wrapper {
+		max-width: rem(1200);
+		margin: 0 auto;
+	}
+
+	.main-site-header {
+		width: 100%;
+		padding: rem(20) 0;
+		margin-bottom: rem(40);
+	}
+}

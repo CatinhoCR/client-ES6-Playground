@@ -1,0 +1,18 @@
+.form {
+	width: rem(360);
+
+	&__group {
+		width: 100%;
+		margin-bottom: rem(20);
+	}
+
+	&__label {
+		margin-bottom: rem(10);
+	}
+
+	&__field {
+		width: 100%;
+		display: block;
+		height: rem(40);
+	}
+}
