@@ -9,11 +9,12 @@ class ArtistComponent {
   async initArtists() {
     this.data = await this.getArtists()
     console.log(this.data)
-    this.artists.innerHTML = await this.render(this.data)
+    // console.log(this.data)
+    // this.artists.innerHTML = await this.render(this.data)
   }
 
   async render() {
-    return await this.template()
+    // return await this.template()
   }
 
   async getArtists() {
